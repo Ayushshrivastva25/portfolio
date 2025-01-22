@@ -1,0 +1,253 @@
+/* styles.css */
+
+/* Reset */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.nav-links li a {
+    color: #fff;
+    font-weight: bold;
+    margin-right:30px ;
+}
+
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: royalblue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -100px;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+}
+
+#hero .btn {
+    display: inline-block;
+    background: #ffc107;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    
+}
+
+.project h3 {
+    margin-bottom: 0.5rem;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background: #007bff;
+    color: #fff;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+.certificate {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.certificate img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.certificate h5 {
+    font-size: 1rem;
+    color: #333;
+}
+
+.certificates {
+    text-align: center;
+    padding: 20px;
+}
+
+.certificate {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.text {
+    display: flex;
+    justify-content: left;
+    padding-left: 10px;
+    color: azure;
+    cursor: pointer;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.img {
+    float: right;
+    position: fixed;
+    top: 20%;
+    left: 38%;
+    margin-left: 100px;
+    height: 500px;
+    width: 800px;
+    display: none;
+    transition: display 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.text:hover {
+    color: red;
+    font-weight: bolder;
+}
+
+.oracle:hover + .oracle1,
+.pp:hover + .pp1,
+.cc1:hover + .cc11,
+.cc2:hover + .cc21,
+.lin:hover + .lin1,
+.ibm:hover + .ibm1 {
+    display: block;
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    .certificates {
+        padding: 10px;
+    }
+    
+    .certificate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    
+    .img {
+        display: block;
+        position: static;
+        width: 90%;
+        max-width: none;
+        height: auto;
+        margin: 10px 0;
+        opacity: 1;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .img:hover {
+        transform: scale(1.05); 
+        opacity: 0.9; 
+    }
+
+    .text {
+        font-size: 16px;
+        padding-left: 5px;
+        text-align: center; 
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .certificates {
+        padding: 5px;
+    }
+
+    .certificate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .text {
+        font-size: 14px;
+        padding-left: 5px;
+        text-align: center; 
+        margin-bottom: 5px;
+    }
+
+    .img {
+        width: 100%;
+        max-width: none;
+        margin: 5px 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .img:hover {
+        transform: scale(1.1); 
+        opacity: 0.85; 
+    }
+}
